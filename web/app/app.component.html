@@ -1,0 +1,29 @@
+<div class="sk-form-container">
+    <form action="">
+        <h3>Add new article</h3>
+        <div class="ui form">
+            <div class="field ui error">
+                <label>Title:</label>
+                <input type="text" name="title"/>
+            </div>
+            <div class="field">
+                <label>Url:</label>
+                <input type="text" name="link"/>
+            </div>
+            <div class="field">
+                <label>Description (max 120 characters):</label>
+                <input type="text" name="description"/>
+            </div>
+            <div class="field">
+                <label>Image URL:</label>
+                <input type="text" name="image"/>
+            </div>
+            <div class="positive ui large button">Add</div>
+        </div>
+    </form>
+</div>
+
+<div class="sk-main-list">
+    <h3 class="sk-column-header">Newest articles</h3>
+    <single-article *ngFor="#article of articles" [article]="article"></single-article>
+</div>

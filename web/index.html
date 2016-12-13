@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular 2</title>
+    <link rel="stylesheet" href="resources/semantic.min.css">
+    <link rel="stylesheet" href="resources/custom.css">
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <!-- Dodatkowe skrypty -->
+    <script src="resources/jquery.min.js"></script>
+    <script src="resources/semantic.min.js"></script>
+
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/boot.js')
+            .then(null, console.error.bind(console));
+    </script>
+</head>
+<body>
+
+<!-- Top -->
+
+<div class="sk-top" id="top-header">
+    <div class="ui inverted segment sticky">
+        <div class="ui inverted secondary menu">
+            <div class="ui container">
+                <div class="ui secondary menu">
+                    <a href="" class="active item">Start</a>
+                    <a href="" class="item">Users</a>
+                    <a href="" class="item">Most scored</a>
+                    <a href="" class="item">Popular</a>
+                </div>
+                <div class="right menu">
+                    <button class="ui inverted button">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tresc aplikacji -->
+<div class="sk-content">
+    <div class="ui container">
+        <div class="ui two column stackable relaxed grid">
+
+            <div class="eleven wide column">
+
+                <articles></articles>
+
+            </div>
+
+            <div class="five wide column">
+                <h3 class="sk-column-header">Statistics</h3>
+                <div class="ui violet inverted padded center aligned segment sk-stats">
+                    <div class="ui column center">
+                        <div class="ui statistic">
+                            <div class="value">7</div>
+                            <div class="label">Articles</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui teal inverted padded center aligned segment sk-stats">
+                    <div class="ui column center">
+                        <div class="ui statistic">
+                            <div class="value">345</div>
+                            <div class="label">Users</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui pink inverted padded center aligned segment sk-stats">
+                    <div class="ui column center">
+                        <div class="ui statistic">
+                            <div class="value">9980</div>
+                            <div class="label">Comments</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sk-popular-users">
+                    <h3 class="sk-column-header">Popular users</h3>
+                    <div class="ui two column grid">
+                        <div class="ui eight column">
+                            <div class="ui card">
+                                <div class="image">
+                                    <img src="resources/images/avatar.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <a class="header">John</a>
+                                </div>
+                                <div class="extra content">
+                                    <a href=""><i class="user icon"></i>6 followers</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui eight column">
+                            <div class="ui card">
+                                <div class="image">
+                                    <img src="resources/images/avatar.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <a class="header">Mark</a>
+                                </div>
+                                <div class="extra content">
+                                    <a href=""><i class="user icon"></i>2 followers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stopka -->
+<footer class="red sk-footer">
+    <div class="ui container">
+        <a href="" class="item">Login</a>
+        <a href="" class="item">FAQ</a>
+        <a href="" class="item">Help</a>
+        <a href="" class="item">Report Abuse</a>
+        <a href="" class="item">Contact</a>
+    </div>
+</footer>
+<script>
+    $('.sticky').sticky();
+</script>
+</body>
+</html>

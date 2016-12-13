@@ -1,0 +1,93 @@
+.sk-top	.segment {
+	margin-top: 0;
+	border-radius: 0;
+	color: rgba(255,255,255,0.8);
+}
+
+.sk-content {
+	margin-top: 80px;
+}
+
+.sk-main-list {
+	margin-top: 60px;
+}
+
+.sk-column-header {
+	margin-bottom: 30px;
+}
+
+/*.sk-list-item {
+	margin-bottom: 60px;
+}*/
+.singlearticle {
+	margin-bottom: 15px;
+	display: block;
+}
+
+.sk-list-item .statistic .value {
+	font-size: 210%;
+}
+
+.sk-list-item .statistic .label {
+	font-size: 70%;
+}
+
+.sk-list-item h4 {
+	margin-bottom: 0;
+}
+
+.sk-list-item span {
+	opacity: 0.5;
+	font-size: 80%;
+}
+
+.sk-list-item p {
+	margin-top: 10px;
+}
+
+.sk-list-item a {
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.sk-list-item img {
+	float: left;
+	margin-right: 25px;
+	max-width: 80px;
+	height: auto;
+}
+
+/* Prawa kolumna */
+.sk-stats * {
+	color: #FFFFFF !important;
+}
+
+.sk-stats .value {
+	font-size: 160%;
+	margin-bottom: 20px;
+}
+
+.sk-popular-users {
+	margin-top: 50px;
+}
+
+/* Stopka */
+.sk-footer {
+	margin-top: 80px;
+	padding: 40px 0;
+	background-color: #1B1C1D;
+	color: #EFEFEF;
+}
+
+.sk-footer a {		
+	color: #EFEFEF;
+	font-size: 110%;
+	margin: 0 12px;
+}
+
+.sk-footer a:first-child {
+	margin-left: 0;
+}
+
+.sk-footer a:hover {
+	color: #DDDDDD;
+}
