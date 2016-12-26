@@ -1,4 +1,4 @@
-import {Article} from "./article"
+import { Article } from './article';
 
 export var ARTICLES: Article[] = [
     new Article('Semantic UI', 'http://semantic-ui.com',

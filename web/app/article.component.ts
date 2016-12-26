@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
-import {Article} from './article';
+import { Component } from 'angular2/core';
+import { Article } from './article';
+import { MultiplyVotesPipe } from './multiply-votes.pipe';
 
 @Component({
     selector: 'single-article',
@@ -7,23 +8,23 @@ import {Article} from './article';
     host: {
         class: 'singlearticle'
     },
-    templateUrl: 'app/article.component.html'
+    templateUrl: 'app/article.component.html',
+    pipes: [MultiplyVotesPipe]
 })
 
 export class ArticleComponent {
 
     article: Article;
 
-    votePlus() : boolean {
+    votePlus(): boolean {
         this.article.votePlus();
         return false;
     }
 
-    voteMinus() : boolean {
+    voteMinus(): boolean {
         this.article.voteMinus();
         return false;
     }
-
 
 }
 

@@ -1,10 +1,10 @@
-<div class="ui segment sk-list-item">
+<div class="sk-list-item">
     <a href="">
         <div class="column">
             <div class="ui grid">
                 <div class="two wide center aligned column">
                     <div class="ui statistic">
-                        <div class="value">{{ article.votes }}</div>
+                        <div class="value">{{ article.votes | multiplyVotes }}</div>
                         <div class="label">Głosów</div>
                     </div>
                     <div class="sk-list-item buttons">

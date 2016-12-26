@@ -1,29 +1,50 @@
 <div class="sk-form-container">
-    <form action="">
+    <form [ngFormModel]="articleForm" (ngSubmit)="onSubmit()">
         <h3>Add new article</h3>
         <div class="ui form">
-            <div class="field ui error">
+            <div class="field ui"
+                 [ngClass]="{error: !articleForm.find('title').valid && articleForm.find('title').touched}">
                 <label>Title:</label>
-                <input type="text" name="title"/>
+                <input type="text"
+                       name="title"
+                       [ngFormControl]="articleForm.controls['title']"/>
             </div>
-            <div class="field">
+            <div class="field"
+                 [ngClass]="{error: !articleForm.find('link').valid && articleForm.find('link').touched}">
                 <label>Url:</label>
-                <input type="text" name="link"/>
+                <input type="text"
+                       name="link"
+                       [ngFormControl]="articleForm.controls['link']"/>
             </div>
-            <div class="field">
+            <div class="field"
+                 [ngClass]="{error: !articleForm.find('description').valid && articleForm.find('description').touched}">
                 <label>Description (max 120 characters):</label>
-                <input type="text" name="description"/>
+                <input type="text"
+                       name="description"
+                       [ngFormControl]="articleForm.controls['description']"/>
             </div>
-            <div class="field">
+            <div class="field"
+                 [ngClass]="{error: !articleForm.find('image').valid && articleForm.find('image').touched}">
                 <label>Image URL:</label>
-                <input type="text" name="image"/>
+                <input type="text"
+                       name="image"
+                       [ngFormControl]="articleForm.controls['image']"/>
             </div>
-            <div class="positive ui large button">Add</div>
+            <button type="submit"
+                    class="positive ui large button disabled"
+                    [ngClass]="{disabled: !articleForm.valid}">
+                Add
+            </button>
         </div>
     </form>
 </div>
 
 <div class="sk-main-list">
     <h3 class="sk-column-header">Newest articles</h3>
-    <single-article *ngFor="#article of articles" [article]="article"></single-article>
+    <single-article class="ui segment"
+                    *ngFor="#article of articles"
+                    [article]="article"
+                    (click)="onSelect(article, $event)"
+                    [class.raised]="article===selectedArticle">
+    </single-article>
 </div>
